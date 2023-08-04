@@ -5,6 +5,23 @@
 
 ![Project Image](project_image.jpg)
 
+## Why Chemical Sensors with IoT?
+
+Instead of relying on image processing techniques, this project employs chemical sensors in combination with IoT technology for the following reasons:
+
+1. **Accuracy**: Chemical sensors are highly accurate in detecting specific gases, such as ethylene. This allows for precise and reliable measurements of the ethylene level in tomatoes during the ripening process.
+
+2. **Real-time Monitoring**: IoT-enabled chemical sensors provide real-time data, enabling continuous monitoring of ethylene levels. This real-time data is crucial for making timely predictions about the tomato's harvesting period.
+
+3. **Cost-effectiveness**: Chemical sensors are often more cost-effective than complex image processing setups. They require less hardware and processing power, making the overall system more affordable.
+
+4. **Non-invasive**: Unlike some image processing techniques, chemical sensors do not require physical contact with the tomatoes. This non-invasive approach ensures that the ripening process remains undisturbed.
+
+5. **Ease of Deployment**: IoT-enabled chemical sensors can be easily deployed on a large scale, making it feasible for agricultural applications where multiple tomatoes are grown simultaneously.
+
+6. **Machine Learning Synergy**: Combining chemical sensors with machine learning algorithms, such as ANN and Random Forest, allows for sophisticated data analysis, leading to accurate predictions of the harvesting time.
+
+
 ## Table of Contents
 
 1. [Introduction](#introduction)
