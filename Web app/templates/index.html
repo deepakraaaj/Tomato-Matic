@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Tomato Status</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            border-radius: 5px;
+        }
+        h1 {
+            text-align: center;
+        }
+        form {
+            margin-top: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: box-shadow 0.2s ease-in-out;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            box-shadow: 0 0 10px rgba(0,0,0,0.4);
+        }
+        button[type="submit"] {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 0 5px rgba(0,0,0,0.2);
+            transition: background-color 0.2s ease-in-out;
+        }
+        button[type="submit"]:hover {
+            background-color: #0062cc;
+            cursor: pointer;
+        }
+        .alert {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .alert-success {
+            background-color: #28a745;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Predict Tomato Status</h1>
+        <form method="POST" action="{{ url_for('predict') }}">
+            <div class="form-group">
+                <label for="ethylene_level">Ethylene Level:</label>
+                <input type="text" id="ethylene_level" name="ethylene_level">
+            </div>
+
+            <div class="form-group">
+                <label for="temperature">Temperature:</label>
+                <input type="text" id="temperature" name="temperature">
+            </div>
+
+            <div class="form-group">
+                <label for="humidity">Humidity:</label>
+                <input type="text" id="humidity" name="humidity">
+            </div>
+
+            <div class="form-group">
+                <label for="tomato_status">Tomato Status:</label>
+                <input type="text" id="tomato_status" name="tomato_status">
+            </div>
+
+            <div class="form-group">
+                <label for="season">Season:</label>
+                <input type="text" id="season" name="season">
+            </div>
+            <button type="submit">Predict</button>
+        </form>
+    
+        {% if prediction == 0 %}
+            <div class="alert alert-success">It's time to harvest your tomatoes!</div>
+        {% elif prediction %}
+            <div class="alert alert-success">Days to harvest: {{ prediction }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>    
