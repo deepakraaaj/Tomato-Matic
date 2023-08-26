@@ -3,6 +3,9 @@
 
 # Ethylene Level-based Tomato Harvest Prediction Project
 
+![ARCHITECTUTE_page-0001](https://github.com/deepakraaaj/Tomato-Matic/assets/138853219/1667742a-1cb4-48d9-82d5-0ec459191bce)
+
+
 ![Project Image](project_image.jpg)
 
 ## Why Chemical Sensors with IoT?
@@ -78,7 +81,7 @@ The project consists of four main components:
 
 ## Project Structure
 
-- `data_collection.py`: Python script to collect data from the ETO sensor and save it to a CSV file.
+- `data_collection.ino`: arduino ide code to collect data from the ETO sensor and save it to a CSV file.
 - `machine_learning_models.ipynb`: Jupyter Notebook containing the code to train ANN and Random Forest models.
 - `web_app.py`: Python script for the web application using Kivy and Flask.
 - `node_mcu_code.ino`: C++ code to program the NodeMCU board.
